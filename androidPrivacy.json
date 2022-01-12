@@ -1,0 +1,27 @@
+{
+    "version" : "1.1.9",
+    "prompt" : "template",
+    "title" : "温馨提示",
+    "message" : "尊敬的用户:<br/>　　您好，货灵鸟平台根据相关法律法规及监管政策要求，修订了<a href=\"https://api.clicksync.cn/hln-yszc.html\">《货灵鸟隐私政策》</a>并特向您说明如下:<br/>　　1、为向您提供相关基本功能，我们会收集、使用必要的信息，你可以通过<a href=\"https://api.clicksync.cn/hln-yszc.html\">《货灵鸟隐私政策》</a>全文内容以了解我们会收集你个人信息类型/权限/目的/范围，了解我们如何收集、使用、管理、存储、共享、转让、传输您的的个人信息，以及你拥有哪些管理权利等事宜。<br/>　　2、未经您的同意，我们不会向第三方主动提供、共享您的个人信息。<br/>　　3、在使用货灵鸟平台各项产品货服务前，请您务必仔细阅读并透彻理解本政策，在确认充分理解并同意后使用相关产品和服务，您选择点击或勾选货灵鸟平台相关页面上的“同意”键或者其他类似按键，即表示您接受本政策全部条款内容的约定并同意我们按照本政策处理您的个人信息。",
+    "buttonAccept" : "同意并接受",
+    "buttonRefuse" : "暂不同意",
+    "second" : {
+        "title" : "确认提示",
+        "message" : "　　进入应用前，你需先同意<a href=\"https://api.clicksync.cn/hln-yszc.html\">《货灵鸟隐私政策》</a>，否则将退出应用。",
+        "buttonAccept" : "同意并继续",
+        "buttonRefuse" : "退出应用"
+    },
+    "styles" : {
+        "backgroundColor" : "#EEEEEE",
+        "borderRadius" : "5px",
+        "title" : {
+            "color" : "#333333"
+        },
+        "buttonAccept" : {
+            "color" : "#333333"
+        },
+        "buttonRefuse" : {
+            "color" : "#999999"
+        }
+    }
+}

@@ -1,0 +1,328 @@
+{
+    "name" : "货灵鸟司机端",
+    "appid" : "__UNI__EBB14EF",
+    "description" : "",
+    "versionName" : "1.1.9",
+    "versionCode" : 119,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "compatible" : {
+            // true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持
+            "ignoreVersion" : true
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : false,
+            "waiting" : false,
+            "autoclose" : false,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Maps" : {},
+            "Geolocation" : {},
+            "Payment" : {},
+            "Push" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "schemes" : "siji"
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "您可以添加相册中的照片到实名认证，运输认证及运输中装卸货及头像中",
+                    "NSLocationWhenInUseUsageDescription" : "您的位置信息将在运行期间被用于距离优先排序和车辆导航",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "您的位置信息将被用于距离优先排序和车辆导航",
+                    "NSCameraUsageDescription" : "授权后可以拍摄照片，您可以添加拍摄照片到实名认证，运输认证及运输中装卸货及头像中",
+                    "NSPhotoLibraryAddUsageDescription" : "您可以添加相册中的照片到实名认证，运输认证及运输中装卸货及头像中",
+                    "NSLocationAlwaysUsageDescription" : "您的位置信息将始终被用于距离优先排序和车辆导航"
+                },
+                "urltypes" : [
+                    {
+                        "urlidentifier" : "com.hab.driver",
+                        "urlschemes" : [ "siji" ]
+                    }
+                ],
+                "urlschemewhitelist" : [ "siji", "huozhu" ],
+                "idfa" : false,
+                "UIBackgroundModes" : "location"
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    }
+                },
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "59a672d452aa5614d983240a01553557",
+                        "appkey_android" : "ff76ae97dd90f4e908a5181003b5f64c"
+                    }
+                },
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "59a672d452aa5614d983240a01553557",
+                        "appkey_android" : "ff76ae97dd90f4e908a5181003b5f64c"
+                    }
+                },
+                "push" : {
+                    "unipush" : {}
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "iosStyle" : "storyboard",
+                "androidStyle" : "default",
+                "ios" : {
+                    "storyboard" : "CustomStoryboard.zip"
+                },
+                "android" : {
+                    "hdpi" : "startUpImg/2.9.png",
+                    "xhdpi" : "startUpImg/1.9.png",
+                    "xxhdpi" : "startUpImg/.9.png"
+                },
+                "useOriginalMsgbox" : true
+            }
+        },
+        "nativePlugins" : {
+            "AMap-NavSdkWX" : {
+                "__plugin_info__" : {
+                    "name" : "高德地图导航、猎鹰轨迹、持续定位插件(Android和iOS)",
+                    "description" : "为兼容uniapp自带高德地图，务必勾选高德地图和定位模块，请及时更新Hbuildx到3.2.12及以上，有问题联系qq：16792999",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=2101",
+                    "android_package_name" : "com.hab.driver",
+                    "ios_bundle_id" : "com.hab.driver",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "2101",
+                    "parameters" : {}
+                }
+            },
+            "CL-CompressImg" : {
+                "__plugin_info__" : {
+                    "name" : "图片(png,jpg)压缩工具,保证图片不失真",
+                    "description" : "支持png,jpg图片压缩，最大保证图片不失真，不模糊，可压缩到指定大小",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=2200",
+                    "android_package_name" : "com.hab.driver",
+                    "ios_bundle_id" : "com.hab.driver",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "2200",
+                    "parameters" : {}
+                }
+            },
+            "liyahong-BDOCR" : {
+                "__plugin_info__" : {
+                    "name" : "【Android/IOS支持】百度ocr、文字识别、身份证识别、银行卡识别",
+                    "description" : "百度OCR文字识别插件，支持设置是否自动识别，支持修改文字及背景颜色，支持返回识别图片",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=2752",
+                    "android_package_name" : "com.hab.driver",
+                    "ios_bundle_id" : "com.hab.driver",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "2752",
+                    "parameters" : {}
+                }
+            },
+            "liyahong-TXOCR" : {
+                "__plugin_info__" : {
+                    "name" : "【Android/IOS】腾讯OCR文字识别、身份证/银行卡/车牌号/驾驶证识别",
+                    "description" : "腾讯OCR，身份证正反（含头像裁剪，实名认证必备）、银行卡、车牌识别、车辆VIN识别、驾驶证、行驶证、名片识别，支持自定义各种配置",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=4243",
+                    "android_package_name" : "com.hab.driver",
+                    "ios_bundle_id" : "com.hab.driver",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "4243",
+                    "parameters" : {}
+                }
+            }
+        }
+    },
+    "h5" : {
+        "devServer" : {
+            "port" : 8081,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/API41" : {
+                    "target" : "https://api.clicksync.cn/hln-app/v4",
+                    // "target" : "http://yapi.hangliu.com.cn/mock/141/4.0/boss/v4",
+                    // "target" : "http://hab.hangliu.com.cn/hln-api/v4",
+                    // "target" : "http://pretest.hangliu.com.cn/hln-api/v4",
+                    // "target" : "http://z340423c48.imdo.co/v4",
+                    // "target" : "https://hz-hln-api.hangliu.com.cn/hln-api/v4",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/API41" : ""
+                    }
+                },
+                "/API40" : {
+                    "target" : "https://api.clicksync.cn/hln-app/v4",
+                    // "target" : "http://yapi.hangliu.com.cn/mock/118/4.0/boss/v4",
+                    // "target" : "http://hab.hangliu.com.cn/hln-api/v4",
+                    // "target" : "http://pretest.hangliu.com.cn/hln-api/v4",
+                    // "target" : "http://z340423c48.imdo.co/v4",
+                    // "target" : "https://hz-hln-api.hangliu.com.cn/hln-api/v4",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/API40" : ""
+                    }
+                },
+                "/API20" : {
+                    "target" : "https://api.clicksync.cn/hln-app",
+                    // "target" : "http://hab.hangliu.com.cn/hab-app-2",
+                    // "target" : "http://pretest.hangliu.com.cn/hln-api",
+                    // "target" : "http://z340423c48.imdo.co",
+                    // "target" : "https://hz-hln-api.hangliu.com.cn/hln-api",
+                    // "target" : "http://yapi.hangliu.com.cn",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/API20" : ""
+                    }
+                },
+                "/API10" : {
+                    // "target" : "http://hab.hangliu.com.cn/hab-app",
+                    // "target" : "http://pretest.hangliu.com.cn/hln-api",
+                    // "target" : "http://z340423c48.imdo.co",
+                    // "target" : "https://hz-hln-api.hangliu.com.cn/hln-api",
+                    "target" : "https://api.clicksync.cn/hln-app",
+                    // "target" : "http://yapi.hangliu.com.cn/mock/64/hab-app",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/API10" : ""
+                    }
+                },
+                "/ip" : {
+                    "target" : "http://pv.sohu.com",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/ip" : ""
+                    }
+                },
+                "/mock" : {
+                    "target" : "http://yapi.hangliu.com.cn/mock/64/hab-app/",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/mock" : ""
+                    }
+                },
+                "/apis" : {
+                    "target" : "https://apis.map.qq.com/ws/distance/v1/",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/apis" : ""
+                    }
+                },
+                "/font" : {
+                    "target" : "http://songgete.oss-cn-hangzhou.aliyuncs.com",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/font" : ""
+                    }
+                }
+            }
+        },
+        "sdkConfigs" : {
+            "maps" : {}
+        }
+    },
+    //
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx385b7b9b26550297",
+        "setting" : {
+            "urlCheck" : true,
+            "es6" : true,
+            "postcss" : false,
+            "minified" : true
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    }
+}

@@ -1,0 +1,458 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//登录页
+		{
+			"path" : "pages/login/login",
+			"style" : {
+				"navigationStyle": "custom" // 隐藏系统导航栏
+			}
+		}
+		// 注销
+        ,{
+            "path" : "pages/logout/logout",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 配货大厅//pages/allocation/allocation
+        ,{
+            "path" : "pages/allocation/allocation",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 短信验证注销
+		,{
+		    "path" : "pages/logoutVerify/logoutVerify",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+		    }
+		    
+		}
+		// 我的
+		,{
+		    "path" : "pages/my/my",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+				// "app-plus": {
+				//     "popGesture": "none" //禁止侧滑
+				// }
+		    }
+		    
+		}
+		// 消息中心
+		,{
+		    "path" : "pages/message/message",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+				// "app-plus": {
+				//     "popGesture": "none" //禁止侧滑
+				// }
+		    }
+		    
+		}
+		// 我的订单
+		,{
+		    "path" : "pages/order/order",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+				// "app-plus": {
+				//     "popGesture": "none" //禁止侧滑
+				// }
+		    }
+		    
+		}
+		// 找货记录
+        ,{
+            "path" : "pages/findRecord/findRecord",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom"// 隐藏系统导航栏
+            }
+            
+        }
+		// 添加常用线路
+        ,{
+            "path" : "pages/commonPath/commonPath",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 常用线路
+        ,{
+            "path" : "pages/myPath/myPath",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 货源详情
+        ,{
+            "path" : "pages/goodsDetails/goodsDetails",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 货主详情
+        ,{
+            "path" : "pages/shipperDetails/shipperDetails",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 订单支付
+        ,{
+            "path" : "pages/pay/pay",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 订单详情
+        ,{
+            "path" : "pages/orderDetails/orderDetails",
+            "style" :                                                                                    
+			{
+			    "navigationStyle": "custom" ,// 隐藏系统导航栏
+				"app-plus": {
+				    "popGesture": "none" //禁止侧滑
+				}
+			}
+        }
+		// 订单搜索
+        ,{
+            "path" : "pages/orderSearch/orderSearch",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",// 隐藏系统导航栏
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none"
+				}
+            }
+            
+        }
+		// 退款流程
+        ,{
+            "path" : "pages/refundFlow/refundFlow",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 消息内容
+        ,{
+            "path" : "pages/messageContent/messageContent",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 我的钱包
+        ,{
+            "path" : "pages/myWallet/myWallet",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 个人中心
+        ,{
+            "path" : "pages/personalCentre/personalCentre",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 跟换手机号
+        ,{
+            "path" : "pages/originalPhone/originalPhone",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 新手机号
+        ,{
+            "path" : "pages/newPhone/newPhone",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 联系电话
+        ,{
+            "path" : "pages/contactNumber/contactNumber",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 添加联系电话
+        ,{
+            "path" : "pages/addPhone/addPhone",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 重置密码
+        ,{
+            "path" : "pages/changePassword/changePassword",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 我的车辆
+        ,{
+            "path" : "pages/myCar/myCar",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 添加车辆
+        ,{
+            "path" : "pages/addCar/addCar",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 货主评价
+        ,{
+            "path" : "pages/userEvaluate/userEvaluate",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom"// 隐藏系统导航栏
+            }
+            
+        }
+		// 我的评价
+        ,{
+            "path" : "pages/myAuthentication/myAuthentication",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 账单详情
+        ,{
+            "path" : "pages/billingDetails/billingDetails",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 账单列表
+        ,{
+            "path" : "pages/billingList/billingList",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom"// 隐藏系统导航栏
+            }
+            
+        }
+		// 充值/提现
+        ,{
+            "path" : "pages/recharge/recharge",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+		// 我的评价
+        ,{
+            "path" : "pages/myEvaluate/myEvaluate",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom"// 隐藏系统导航栏
+            }
+            
+        }
+		// 协议文案
+        ,{
+            "path" : "pages/pact/userServer/userServer",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/pact/memberServer/memberServer",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/pact/privacyPolicy/privacyPolicy",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/pact/cancellationNotice/cancellationNotice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/pact/transportTrade/transportTrade",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/pact/transportProtocol/transportProtocol",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/warehouseBooking/warehouseBooking",
+            "style" :
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+  
+        }
+		,{
+		    "path" : "pages/cargoProgress/cargoProgress",
+		    "style" :
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+		    }
+		    
+		},
+		{
+		    "path" : "pages/scanSubscribe/scanSubscribe",
+		    "style" :
+		    {
+		        "navigationStyle": "custom" // 隐藏系统导航栏
+		    }
+		  
+		}
+		// 报错页
+        ,{
+            "path" : "pages/networkAnomaly/networkAnomaly",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+        ,{
+            "path" : "pages/bookingHall/bookingHall",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+				// 关于货灵鸟
+        ,{
+            "path" : "pages/aboutHln/aboutHln",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom" // 隐藏系统导航栏
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F5F6F7",
+		"backgroundColor": "#F5F6F7",
+		"backgroundColorTop":"#FFFFFF" ,// iOS APP真机bounce回弹区域默认灰色,建议统一重置为白色
+		"app-plus": {  
+			"background": "#F5F6F7",  
+			"animationAlphaBGColor": "#00ff7f"
+		}
+	},
+	"tabBar": {
+	    "color": "#666666",
+	    "selectedColor": "#FB6E2F",
+	    "borderStyle": "white",
+	    "backgroundColor": "#ffffff",
+		"height": "55px",
+	    "list": [
+			{
+				"pagePath": "pages/allocation/allocation",
+				"iconPath": "static/allocation_disabled.png",
+				"selectedIconPath": "static/allocation.png",
+				"text": "配货大厅"
+			}, 
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/message_disabled.png",
+				"selectedIconPath": "static/message.png",
+				"text": "消息中心"
+			},
+			{
+				"pagePath": "pages/order/order",
+				"iconPath": "static/order_disabled.png",
+				"selectedIconPath": "static/order.png",
+				"text": "我的订单"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/my_disabled.png",
+				"selectedIconPath": "static/my.png",
+				"text": "我的"
+			}
+		]
+	}
+}

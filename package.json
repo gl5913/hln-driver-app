@@ -1,0 +1,21 @@
+{
+  "name": "hab-driver",
+  "version": "1.0.0",
+  "description": "司机端app代码",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gaoliang@114.215.83.61:8099/r/platform/hab/code/app/driver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "uuid": "^8.3.2",
+    "zx-markdown-editor": "0.0.2"
+  }
+}

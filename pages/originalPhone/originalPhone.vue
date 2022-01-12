@@ -1,0 +1,179 @@
+<template>
+	<view class="logoutVerifyBox">
+		<u-navbar title-width="300" back-text="" title="更换手机号"></u-navbar>
+		<view style="margin-top: 24rpx;" class="autConCon2">
+			<text class="autConCon2Tit">原手机号</text>
+			<input class="autConCon2Inp" placeholder="请输入原手机号码" maxlength="11" placeholder-class="inpsty" type="text" name="userName" v-model="username">
+		</view>
+		<view style="margin-top: 2rpx;" class="autConCon2">
+			<text class="autConCon2Tit">验证码</text>
+			<input maxlength="6" style="width: 38%;" class="autConCon2Inp" placeholder-class="inpsty" type="number" name="authCode" v-model="authcode">
+			<u-verification-code unique-key="page-originalPhone" change-text="XS 重新获取" ref="uCode" @change="codeChange"></u-verification-code>
+			<view class="authcodes" @tap="getCode">{{ tips }}</view>
+		</view>
+		<button @click="goNext" :disabled="authcode == '' || username == ''" style="background: #FFC24D;" class="submitBtn" :class="{loginButton: authcode == '' || username == ''}">下一步</button>
+		
+	</view>
+</template>
+
+<script>
+	import config from '../../service/config.js';
+	import ajax from '../../service/ajax.js';
+	import moment from 'moment';
+	import burying from '../../common/request.js';
+	
+	export default {
+		data() {
+			return {
+				// 验证码
+				tips: '',
+				// 手机号码
+				username: '',
+				// 输入的验证码
+				authcode: '',
+				
+				// 原手机号
+				rawPhone: '',
+				
+				codeTime: true,
+			}
+		},
+		onLoad(option) {
+			this.rawPhone = option.phone;
+		},
+		methods: {
+			
+			// 下一步
+			goNext() {
+				let usernameReg = /^[1][0-9]{10}$/;
+				let codeReg = /^[0-9]{6}$/;
+				if(usernameReg.test(this.username)) {
+					if(codeReg.test(this.authcode)) {
+						this.phoneVerify();
+					} else {
+						uni.showToast({ title: "验证码格式错误（格式为6位数字），请重新输入",icon: "none" ,duration:2000});
+					}
+				} else {
+					uni.showToast({ title: "手机号格式错误（格式为11位数字），请重新输入",icon: "none" ,duration:2000});
+				}
+			},
+			
+			// 手机号码验证
+			phoneVerify() {
+				ajax.get(config.phoneVerify_url,{
+				  phone: this.username,
+				  code: this.authcode,
+				  type: 2
+				}).then(res => {
+					console.log(res)
+					if(res.code == 0){
+						uni.navigateTo({
+							url: "/pages/newPhone/newPhone"
+						})
+					} else {
+						uni.showToast({ title: "验证失败，请重新验证",icon: "none" ,duration:2000});
+					}
+				}).catch(err => {
+					console.log("手机号码验证接口数据返回失败 error is :" + err);
+				})
+			},
+			
+			// 获取验证码
+			codeChange(text) {
+				this.tips = text;
+			},
+			getCode() {
+				if(this.username == this.rawPhone) {
+					if(this.$refs.uCode.canGetCode) {
+						if(this.codeTime) {
+							this.codeTime = false;
+							this.getAuthcode();
+						}
+						setTimeout(() => {
+							uni.hideLoading();
+							// 这里此提示会被this.start()方法中的提示覆盖
+							this.$u.toast('验证码已发送');
+							// 通知验证码组件内部开始倒计时
+							this.$refs.uCode.start();
+						}, 1000);
+					}
+				} else {
+					uni.showToast({ title: "输入的手机号与原手机号不一致，请重新输入",icon: "none" ,duration:2000});
+				}
+			},
+			getAuthcode() {
+				ajax.get(config.code_url,{
+				  phone: this.username,
+				  type: 4
+				}).then(res => {
+					console.log(res)
+					this.codeTime = true;
+					if(res.code == 0){
+						console.log("获取验证码成功");
+					} else {
+						console.log(res);
+					}
+				}).catch(err => {
+					this.codeTime = true;
+					console.log("获取验证码接口数据返回失败 error is :" + err);
+				})
+			},
+		}
+	}
+</script>
+
+<style scoped lang="scss">
+	.logoutVerifyBox {
+		.submitBtn {
+			width: 90%;
+			height: 80rpx;
+			line-height: 80rpx;
+			position: absolute;
+			left: 5%;
+			bottom: 12%;
+			color: #333333;
+		}
+		.loginButton {
+			background: #DDDDDD !important;
+			color: #333333;
+		}
+		.autConCon2 {
+			width: 100%;
+			height: 80rpx;
+			font-size: 28rpx;
+			color: #666666;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #ffffff;
+			.authcodes {
+				text-align: center;
+				width: 30%;
+				line-height: 52rpx;
+				border-left: 2rpx solid #DDDDDD;
+				height: 52rpx;
+				font-size: 24rpx;
+				color: #FB6E2F;
+			}
+			.inpsty {
+				font-size: 28rpx;
+				color: #999999;
+			}
+			.autConCon2Tit {
+				width: 20%;
+				margin-left: 30rpx;
+				height: 38rpx;
+				line-height: 38rpx;
+				text-align: right;
+			}
+			.autConCon2Inp {
+				width: 70%;
+				margin-left: 30rpx;
+				height: 38rpx;
+				line-height: 38rpx;
+				font-size: 28rpx;
+				color: #999999;
+			}
+		}
+	}
+</style>
